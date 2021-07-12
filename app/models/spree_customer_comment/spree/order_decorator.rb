@@ -24,6 +24,5 @@ module SpreeCustomerComment
   end
 end
 ::Spree::Order.prepend SpreeCustomerComment::Spree::OrderDecorator if ::Spree::Order.included_modules.exclude?(SpreeCustomerComment::Spree::OrderDecorator)
-::Spree::PermittedAttributes.checkout_attributes.push :customer_comment_attributes
+::Spree::PermittedAttributes.checkout_attributes.push [customer_comment_attributes: [:text]]
 
-#::Spree::Order.insert_checkout_step :customer_comment, after: :address
