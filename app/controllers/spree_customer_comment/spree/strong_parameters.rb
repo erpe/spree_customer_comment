@@ -18,4 +18,4 @@ module SpreeCustomerComment
   end
 end
 
-::Spree::CheckoutController.prepend SpreeCustomerComment::Spree::Core::ControllerHelpers::StrongParametersDecorator if ::Spree::CheckoutController.included_modules.exclude?(SpreeCustomerComment::Spree::Core::ControllerHelpers::StrongParametersDecorator)
+#::Spree::CheckoutController.prepend SpreeCustomerComment::Spree::Core::ControllerHelpers::StrongParametersDecorator if ::Spree::CheckoutController.included_modules.exclude?(SpreeCustomerComment::Spree::Core::ControllerHelpers::StrongParametersDecorator)
