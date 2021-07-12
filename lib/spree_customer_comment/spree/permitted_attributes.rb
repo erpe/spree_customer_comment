@@ -1,5 +1,5 @@
 module Spree
   module PermittedAttributes
-    @@checkout_attributes += %i[customer_comment_attributes]
+    @@checkout_attributes += customer_comment_attributes: [:text]
   end
 end
