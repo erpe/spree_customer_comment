@@ -1,0 +1,15 @@
+<h1>
+  customer comment here to come...
+</h1>
+
+<div id='customer-comment'>
+  <%= form.fields_for :customer_comment do |comment_form| %>
+
+    <label>Kommentar</label>
+    <%= comment_form.text_area :text %>
+
+
+  <% end %>
+</div>
+
+
