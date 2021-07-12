@@ -3,6 +3,9 @@ module SpreeCustomerComment
     module OrderDecorator
 
       def self.prepended(base)
+
+        ::Spree::PermittedAttributes.checkout_attributes.push [customer_comment_attributes: [:text]]
+
         base.has_one :customer_comment,
           class_name: 'Spree::CustomerComment',
           dependent: :destroy,
@@ -24,5 +27,4 @@ module SpreeCustomerComment
   end
 end
 ::Spree::Order.prepend SpreeCustomerComment::Spree::OrderDecorator if ::Spree::Order.included_modules.exclude?(SpreeCustomerComment::Spree::OrderDecorator)
-::Spree::PermittedAttributes.checkout_attributes.push [customer_comment_attributes: [:text]]
 

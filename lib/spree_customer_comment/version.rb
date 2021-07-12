@@ -1,5 +1,5 @@
 module SpreeCustomerComment
-  VERSION = '0.0.1-36'.freeze
+  VERSION = '0.0.1-37'.freeze
 
   module_function
 
